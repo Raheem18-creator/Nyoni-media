@@ -1,0 +1,22 @@
+ <svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="200" height="80" rx="10" fill="#1e293b"/>
+  
+  <!-- Film icon -->
+  <circle cx="40" cy="40" r="20" fill="url(#gradient)"/>
+  <rect x="25" y="25" width="30" height="30" rx="3" fill="#1e293b"/>
+  <rect x="28" y="28" width="8" height="8" rx="1" fill="white"/>
+  <rect x="40" y="28" width="8" height="8" rx="1" fill="white"/>
+  <rect x="28" y="40" width="8" height="8" rx="1" fill="white"/>
+  <rect x="40" y="40" width="8" height="8" rx="1" fill="white"/>
+  
+  <!-- Text -->
+  <text x="80" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="url(#gradient)">NYONI</text>
+  <text x="80" y="55" font-family="Arial" font-size="24" font-weight="bold" fill="white">MEDIA</text>
+</svg>
