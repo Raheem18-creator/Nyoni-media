@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYONI MEDIA - Tafuta Filamu Yoyote</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Kichwa cha Tovuti -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <i class="fas fa-film logo-icon"></i>
+                <h1>NYONI <span>MEDIA</span></h1>
+            </div>
+            <p class="tagline">Tafuta filamu yoyote, popote, wakati wowote</p>
+        </div>
+    </header>
+
+    <!-- Sehemu ya Kutafuta -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="movieSearch" placeholder="Weka jina la filamu...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Tafuta</button>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="popular">Zinazovuma</button>
+                <button class="filter-btn" data-filter="top_rated">Bora zaidi</button>
+                <button class="filter-btn" data-filter="upcoming">Inakuja</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sehemu ya Matokeo ya Filamu -->
+    <main class="container">
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Inatafuta filamu...</p>
+        </div>
+        
+        <div id="movieResults" class="movie-grid">
+            <!-- Matokeo yataonekana hapa -->
+        </div>
+        
+        <div id="noResults" class="hidden">
+            <i class="fas fa-film fa-3x"></i>
+            <h3>Hakuna filamu zilizopatikana</h3>
+            <p>Jaribu kutafuta kwa jina tofauti</p>
+        </div>
+    </main>
+
+    <!-- Kijachini cha Tovuti -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="report-error.html" class="footer-link">
+                    <i class="fas fa-bug"></i> Ripoti Hitilafu
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r" target="_blank" class="footer-link">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Channel
+                </a>
+                <a href="https://github.com/Raheem-cm/RAHEEM-XMD-3/fork" target="_blank" class="footer-link">
+                    <i class="fab fa-github"></i> GitHub Repo
+                </a>
+                <a href="tel:+255763111390" class="footer-link">
+                    <i class="fas fa-phone"></i> Piga Simu: +255763111390
+                </a>
+            </div>
+            
+            <div class="api-info">
+                <p>Filamu zinapatikana kwa hisani ya <a href="https://www.themoviedb.org/" target="_blank">TMDb</a></p>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> NYONI MEDIA. Haki zote zimehifadhiwa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal ya Maelezo ya Filamu -->
+    <div id="movieModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalDetails">
+                <!-- Maelezo ya filamu yataonekana hapa -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
