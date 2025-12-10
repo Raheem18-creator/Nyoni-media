@@ -1,0 +1,360 @@
+ /* Reset na Viwango vya Msingi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f1f5f9;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Kichwa cha Tovuti */
+header {
+    background: rgba(15, 23, 42, 0.9);
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #3b82f6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.logo-icon {
+    font-size: 2.8rem;
+    color: #3b82f6;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h1 span {
+    color: #f1f5f9;
+}
+
+.tagline {
+    text-align: center;
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* Sehemu ya Kutafuta */
+.search-section {
+    padding: 2.5rem 0;
+}
+
+.search-box {
+    display: flex;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+#movieSearch {
+    flex: 1;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    background: #1e293b;
+    color: white;
+    border: 2px solid #334155;
+    transition: all 0.3s;
+}
+
+#movieSearch:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+#searchBtn {
+    padding: 18px 35px;
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background: #334155;
+    color: #cbd5e1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Loading Spinner */
+#loading {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #334155;
+    border-top: 5px solid #3b82f6;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Grid ya Filamu */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.movie-card {
+    background: #1e293b;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid #334155;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #3b82f6;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.poster-placeholder {
+    width: 100%;
+    height: 350px;
+    background: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+}
+
+.movie-info {
+    padding: 20px;
+}
+
+.movie-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f1f5f9;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.rating {
+    color: #fbbf24;
+    font-weight: bold;
+}
+
+/* Hakuna Matokeo */
+#noResults {
+    text-align: center;
+    padding: 80px 20px;
+    color: #94a3b8;
+}
+
+#noResults i {
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+/* Kijachini */
+footer {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+    border-top: 2px solid #334155;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    background: rgba(51, 65, 85, 0.3);
+}
+
+.footer-link:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.api-info {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.api-info a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Modal ya Filamu */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #1e293b;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    border: 2px solid #3b82f6;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+    color: #94a3b8;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: white;
+}
+
+#modalDetails {
+    padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    #searchBtn {
+        justify-content: center;
+    }
+    
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+  }
